@@ -1,7 +1,9 @@
 import axios from 'axios'
+import type { UnwrapRef } from 'vue'
+import type { Event } from '@/types'
 
 const apiClient = axios.create({
-  baseURL: 'https://my-json-server.typicode.com/kengChayodom/Compo-Lab02',
+  baseURL: import.meta.env.VITE_BACKEND_URL,
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -16,5 +18,8 @@ export default {
 
   getEvent(id: number) {
     return apiClient.get('/events/' + id)
+  },
+  saveEvent(event: UnwrapRef<Event>) {
+    return apiClient.post('/events', event)
   },
 }
