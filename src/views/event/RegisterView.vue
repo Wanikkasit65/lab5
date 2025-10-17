@@ -15,7 +15,7 @@ const store = useMessageStore()
 const register = () => {
   // If the registration API call successful
   // Push back to the event details view
-  store.updateMessage('You successsuflly registered for ' + props.event.title)
+  store.updateMessage('You successfully registered for ' + props.event.title)
   setTimeout(() => {
     store.resetMessage()
   }, 3000)
