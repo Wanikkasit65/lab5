@@ -21,7 +21,7 @@ const { message } = storeToRefs(store)
           <RouterLink
             class="font-bold text-gray-700"
             exact-active-class="text-green-500"
-            :to="{ name: 'event-list-view' }"
+            :to="{ name: 'home' }"
             >Event</RouterLink
           >
           <RouterLink
